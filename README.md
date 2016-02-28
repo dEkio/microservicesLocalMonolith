@@ -1,2 +1,2 @@
 # microservicesLocalMonolith
-Use different combination for dev/prod
+Use different combination for dev/prod 
