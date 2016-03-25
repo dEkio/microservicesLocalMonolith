@@ -3,6 +3,10 @@ package com.spring.netflix;
 public class Service2Pojo {
     private String prop;
 
+    public Service2Pojo() {
+        super();
+    }
+
     public Service2Pojo(String prop) {
         this.prop = prop;
     }
