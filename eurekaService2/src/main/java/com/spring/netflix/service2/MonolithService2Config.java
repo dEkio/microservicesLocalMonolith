@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Profile;
 
 @Profile("monolith")
 @Configuration
-public class MonolithConfig {
+public class MonolithService2Config {
 
     @Bean
     public Service2Controller getService2Controller() {

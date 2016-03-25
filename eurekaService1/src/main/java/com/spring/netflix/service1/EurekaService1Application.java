@@ -11,12 +11,14 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@Profile("microservice")
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
@@ -24,6 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Import(MicroserviceConf.class)
 public class EurekaService1Application {
     public static void main(String[] args) {
+        System.setProperty("spring.profiles.active", "microservice");
         SpringApplication.run(EurekaService1Application.class, args);
     }
 

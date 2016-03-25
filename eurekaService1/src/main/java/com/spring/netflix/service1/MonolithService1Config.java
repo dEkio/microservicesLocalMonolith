@@ -5,6 +5,6 @@ import org.springframework.context.annotation.Profile;
 
 @Profile("monolith")
 @Configuration
-public class MonolithConfig {
+public class MonolithService1Config {
 
 }
