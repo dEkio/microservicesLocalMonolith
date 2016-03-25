@@ -1,4 +1,4 @@
-package com.spring.netflix;
+package com.spring.netflix.service2.api;
 
 public class Service2Pojo {
     private String prop;

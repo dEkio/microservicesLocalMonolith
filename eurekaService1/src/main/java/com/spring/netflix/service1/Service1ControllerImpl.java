@@ -2,8 +2,7 @@ package com.spring.netflix.service1;
 
 import com.spring.netflix.Service1Controller;
 import com.spring.netflix.Service1Pojo;
-import com.spring.netflix.Service2Controller;
-import com.spring.netflix.Service2ControllerHystrix;
+import com.spring.netflix.service2.api.Service2Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

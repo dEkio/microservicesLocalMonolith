@@ -1,29 +1,21 @@
 package com.spring.netflix.service1;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.spring.netflix.MicroserviceConf;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.spring.netflix.service2.api.MicroserviceConf;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @Profile("microservice")
-@SpringBootApplication
+@Configuration
+@EnableAutoConfiguration
 @EnableEurekaClient
-@EnableFeignClients
 @EnableCircuitBreaker
-@Import(MicroserviceConf.class)
+@Import({MicroserviceConf.class, Config.class})
 public class EurekaService1Application {
     public static void main(String[] args) {
         System.setProperty("spring.profiles.active", "microservice");

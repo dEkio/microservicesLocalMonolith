@@ -1,4 +1,4 @@
-package com.spring.netflix;
+package com.spring.netflix.service2.api;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
