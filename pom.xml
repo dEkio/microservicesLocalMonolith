@@ -16,5 +16,6 @@
     <module>eurekaService2</module>
     <module>eurekaService2Api</module>
     <module>monolith</module>
+    <module>tools</module>
   </modules>
 </project>
