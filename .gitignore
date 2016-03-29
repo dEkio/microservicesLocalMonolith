@@ -10,3 +10,4 @@ buildNumber.properties
 /eureka/*.iml
 /eurekaService1/*.iml
 /*.iml
+.idea
