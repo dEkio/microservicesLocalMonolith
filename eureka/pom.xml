@@ -79,5 +79,18 @@
 			</snapshots>
 		</repository>
 	</repositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>nexus-deployment</id>
+			<name>Internal Releases</name>
+			<url>http://${repository.address}/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-deployment</id>
+			<name>Internal Releases</name>
+			<url>http://${repository.address}/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
