@@ -8,4 +8,4 @@ RUN apt-get update -y && \
   apt-get install wget -y && \
   wget -O ~/eureka.jar ${NEXUS_ARTIFACT}
   
-RUN java -jar ~/eureka.jar &
+CMD java -jar ~/eureka.jar
